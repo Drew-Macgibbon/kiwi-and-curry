@@ -9,7 +9,7 @@ const items = [
     role_id: 1,
     tag_ids: [1, 2, 3],
     status_ids: [1, 2],
-    user_ids: [1, 2, 3]
+    user_ids: [1, 2]
   },
   {
     title: 'Example Item 2',
@@ -20,7 +20,7 @@ const items = [
     role_id: 2,
     tag_ids: [4, 5, 6],
     status_ids: [2, 3],
-    user_ids: [3, 4, 5]
+    user_ids: [1]
   }
   // ... more items
 ]
@@ -34,7 +34,7 @@ export default defineStore('user', {
       this.user = user
     },
     async bulkInsertItems() {
-      const supabase = useSupabaseClient()
+      const supabase = useSupabase()
       const { data, error } = await supabase.rpc('insert_bucket_list_items', {
         p_items: items
       })

@@ -1,7 +1,13 @@
 <template>
   <div class="container mx-auto p-4">
     <DataTest />
-    <!-- <div class="flex flex-col md:flex-row gap-4">
+    <button
+      class="bg-blue-500 p-6 rounded-md shadow-md mt-4"
+      @click="d.fetchData()"
+    >
+      get bucket list items
+    </button>
+    <div class="flex flex-col md:flex-row gap-4">
       <div class="w-full md:w-2/3">
         <BucketList :filters="filters" />
       </div>
@@ -12,20 +18,20 @@
           @update-filters="updateFilters"
         />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import BucketList from '~/components/BucketList.vue'
-// import Filters from '~/components/Filters.vue'
 
-// const filters = ref({ category: '', tags: [] })
+const d = useData()
 
-// const categories = ['Adventure', 'Culture', 'Nature']
-// const tags = ['Hiking', 'Food', 'Beaches']
+const filters = ref({ category: '', tags: [] })
 
-// const updateFilters = (newFilters) => {
-//   filters.value = newFilters
-// }
+const categories = ['Adventure', 'Culture', 'Nature']
+const tags = ['Hiking', 'Food', 'Beaches']
+
+const updateFilters = (newFilters) => {
+  filters.value = newFilters
+}
 </script>

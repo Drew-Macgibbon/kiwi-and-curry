@@ -6,7 +6,7 @@ export type Role = z.infer<typeof schema.Role>
 export type User = z.infer<typeof schema.User>
 
 // Bucket List Items Types
-export type Item = z.infer<typeof schema.BucketListItem>
+export type BucketListItem = z.infer<typeof schema.BucketListItem>
 export type Category = z.infer<typeof schema.Category>
 export type Country = z.infer<typeof schema.Country>
 export type Difficulty = z.infer<typeof schema.Difficulty>

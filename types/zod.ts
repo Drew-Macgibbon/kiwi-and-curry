@@ -6,6 +6,12 @@ export const Role = z.object({
   body: z.string().nullable().optional()
 })
 
+export const Time = z.object({
+  id: z.number(),
+  name: z.string().nullable(),
+  ramge: z.string().nullable().optional()
+})
+
 export const Cost = z.object({
   id: z.number(),
   name: z.string(),
@@ -52,9 +58,9 @@ export const User = z.object({
   updated_at: z.string().optional(),
   given_name: z.string(),
   surname: z.string().nullable().optional(),
-  username: z.string().nullable(),
-  avatar: z.string().nullable(),
-  introduction: z.string().nullable(),
+  username: z.string().nullable().optional(),
+  avatar: z.string().nullable().optional(),
+  introduction: z.string().nullable().optional(),
   role_id: z.number().optional()
 })
 
@@ -64,10 +70,13 @@ export const BucketListItem = z.object({
   updated_at: z.string().optional(),
   title: z.string(),
   body: z.string().nullable().optional(),
-  category_id: z.number().optional(),
-  country_id: z.number().optional(),
-  cost_id: z.number().optional(),
-  time_taken_id: z.number().optional(),
-  role_id: z.number().optional(),
-  tags: z.array(Tag).optional()
+  country: Country.optional(),
+  cost: Cost.optional(),
+  time_taken: Time.optional(),
+  visibility: Role.optional(),
+  difficulty: Difficulty.optional(),
+  category: Category,
+  status: z.array(Status),
+  tags: z.array(Tag).optional(),
+  users: z.array(User).optional()
 })

@@ -1,29 +1,23 @@
 {
-	"recommendations": [
-		// snippets / autocomplete
-		"christian-kohler.path-intellisense",
-		"sdras.vue-vscode-snippets",
-		"formulahendry.auto-rename-tag",
-		// productivity
-		"ms-vscode.powershell",
-		"github.vscode-pull-request-github",
-		"wakatime.vscode-wakatime",
-		"hediet.vscode-drawio",
-		// language
-		"ecmel.vscode-html-css",
-		"ms-vscode.vscode-typescript-next",
-		"graphql.vscode-graphql",
-		"graphql.vscode-graphql-syntax",
-		"bradlc.vscode-tailwindcss",
-		"vue.volar",
-		"vue.vscode-typescript-vue-plugin",
-		"nuxt.mdc",
-		"unifiedjs.vscode-mdx",
-		// style / linting
-		"dbaeumer.vscode-eslint",
-		"aaron-bond.better-comments",
-		"esbenp.prettier-vscode",
-		"naumovs.color-highlight",
-		"oderwat.indent-rainbow"
-	]
+  "recommendations": [
+    "christian-kohler.path-intellisense",
+    "sdras.vue-vscode-snippets",
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.powershell",
+    "github.vscode-pull-request-github",
+    "wakatime.vscode-wakatime",
+    "hediet.vscode-drawio",
+    "ecmel.vscode-html-css",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "nuxt.mdc",
+    "unifiedjs.vscode-mdx",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "esbenp.prettier-vscode",
+    "naumovs.color-highlight",
+    "oderwat.indent-rainbow"
+  ]
 }

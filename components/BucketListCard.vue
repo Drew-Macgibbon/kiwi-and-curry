@@ -1,21 +1,24 @@
 <!-- components/BucketListCard.vue -->
 <template>
-  <div class="bg-white p-4 rounded-md shadow-md relative">
-    <h2 class="text-xl font-bold">{{ props.item.title }}</h2>
-    <p class="text-gray-600">{{ props.item.description }}</p>
-    <div class="flex mt-2">
-      <span class="mr-2">{{ props.item.category }}</span>
-      <span v-for="tag in props.item.tags" :key="tag" class="mr-1">{{
-        tag
-      }}</span>
+   <div class="bg-white border border-gray-200 rounded shadow-md p-4 max-w-md mx-auto">
+    <div class="flex">
+      <div class="w-1/4">
+        <img class="w-full h-24 object-cover rounded" src="https://via.placeholder.com/150" alt="Bucket List Item" />
+      </div>
+      <div class="w-3/4 ml-4">
+        <h2 class="text-xl font-semibold">{{ item.title }}</h2>
+        <p class="text-gray-600 text-sm">{{ item.created_at | formatDate }}</p>
+        <div class="mt-2">
+          <span class="inline-block bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{{ item.category.name }}</span>
+          <span v-for="tag in item.tags" :key="tag.id" class="ml-2 inline-block bg-green-200 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">{{ tag.name }}</span>
+        </div>
+      </div>
     </div>
-    <button @click="editItem" class="absolute top-2 right-2">Edit</button>
-    <button @click="deleteItem" class="absolute top-2 right-10">Delete</button>
   </div>
 </template>
 
 <script lang="ts" setup>
-const supabase = useSupabaseClient()
+const supabase = useSupabase()
 
 const props = defineProps({
   item: {

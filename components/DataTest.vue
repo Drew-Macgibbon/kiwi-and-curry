@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 
-const client = useSupabaseClient()
+const client = useSupabase()
 const { data: categories } = await useAsyncData('categories', async () => {
   const { data } = await client.from('categories').select('id, name')
   return data

@@ -7,8 +7,7 @@
 
 <script lang="ts" setup>
 import BucketListCard from './BucketListCard.vue'
-
-// const supabase = useSupabaseClient()
+import { BucketListItem, Tag } from '@/types'
 
 const props = defineProps({
   filters: {
@@ -17,24 +16,13 @@ const props = defineProps({
   }
 })
 
-const items = ref<BucketListItem[]>([])
-
-// const fetchItems = async () => {
-//   const { data, error } = await supabase
-//     .from<BucketListItem>('bucket_list_items')
-//     .select('*')
-//   if (error) throw error
-//   items.value = data || []
-// }
-
-// fetchItems()
+const d = useData()
 
 // Implement filtering logic here
 const filteredItems = computed(() => {
-  return items.value.filter((item) => {
-    const categoryFilter =
-      !props.filters.category || item.category === props.filters.category
-    const tagFilter = props.filters.tags.every((tag) => item.tags.includes(tag))
+  return d.items.filter((item: BucketListItem) => {
+    const categoryFilter = !props.filters.category || item.category.name === props.filters.category
+    const tagFilter = props.filters.tags.every((tag: Tag) => item.tags.includes(tag))
     return categoryFilter && tagFilter
   })
 })

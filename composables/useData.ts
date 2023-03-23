@@ -1,55 +1,59 @@
 // store/data.js
 import { defineStore } from 'pinia'
 import { validateWithZod } from './utils/validation'
+import * as z from '@/types/zod'
+import * as t from '@/types'
 
-const supabase = useSupabaseClient()
+type AppState = {
+  items: t.BucketListItem[]
+  categories: t.Category[]
+  tags: t.Tag[]
+  costs: t.Cost[]
+  status: t.Status[]
+  difficulties: t.Difficulty[]
+  error: Error | null
+}
 
-export const useDataStore = defineStore('data', {
-  state: () => ({
-    categories: [],
-    tags: [],
-    costs: [],
-    status: [],
-    difficulties: [],
+export default defineStore('data', {
+  state: (): AppState => ({
+    items: [] as t.BucketListItem[],
+    categories: [] as t.Category[],
+    tags: [] as t.Tag[],
+    costs: [] as t.Cost[],
+    status: [] as t.Status[],
+    difficulties: [] as t.Difficulty[],
     error: null
   }),
   actions: {
-    async fetchData(zodSchemas) {
+    async fetchData() {
+      const supabase = useSupabase()
       try {
-        const { data: categoriesData, error: categoriesError } = await supabase
-          .from('categories')
-          .select('id, name')
-        if (categoriesError) throw categoriesError
-        this.categories = validateWithZod(zodSchemas.categories, categoriesData)
+        // const { data: costsData, error: costsError } = await supabase
+        //   .from('costs')
+        //   .select('id, name')
+        // if (costsError) throw costsError
+        // this.costs = validateWithZod(z.Cost, costsData)
 
-        const { data: tagsData, error: tagsError } = await supabase
-          .from('tags')
-          .select('id, name')
-        if (tagsError) throw tagsError
-        this.tags = validateWithZod(zodSchemas.tags, tagsData)
+        // const { data: statusData, error: statusError } = await supabase
+        //   .from('status')
+        //   .select('id, name')
+        // if (statusError) throw statusError
+        // this.status = validateWithZod(z.Status, statusData)
 
-        const { data: costsData, error: costsError } = await supabase
-          .from('costs')
-          .select('id, name')
-        if (costsError) throw costsError
-        this.costs = validateWithZod(zodSchemas.costs, costsData)
+        // const { data: difficultiesData, error: difficultiesError } =
+        //   await supabase.from('difficulties').select('id, name')
 
-        const { data: statusData, error: statusError } = await supabase
-          .from('status')
-          .select('id, name')
-        if (statusError) throw statusError
-        this.status = validateWithZod(zodSchemas.status, statusData)
+        // if (difficultiesError) throw difficultiesError
+        // this.difficulties = validateWithZod(z.Difficulty, difficultiesData)
 
-        const { data: difficultiesData, error: difficultiesError } =
-          await supabase.from('difficulties').select('id, name')
+        const { data, error } = await supabase.rpc('get_items')
+        console.log('itemsReturned', data, error)
 
-        if (difficultiesError) throw difficultiesError
-        this.difficulties = validateWithZod(
-          zodSchemas.difficulties,
-          difficultiesData
-        )
+        if (error) throw error
+        this.items = validateWithZod(z.BucketListItem, data)
       } catch (err) {
-        this.error = err.message
+        console.error('error getting items', err)
+        // this.error = err
       }
     }
   }
