@@ -6,7 +6,7 @@ export const Role = z.object({
   body: z.string().nullable().optional()
 })
 
-export const Time = z.object({
+export const TimeTaken = z.object({
   id: z.number(),
   name: z.string().nullable(),
   ramge: z.string().nullable().optional()
@@ -70,9 +70,9 @@ export const BucketListItem = z.object({
   updated_at: z.string().optional(),
   title: z.string(),
   body: z.string().nullable().optional(),
-  country: Country.optional(),
+  country: Country.nullable().optional(),
   cost: Cost.optional(),
-  time_taken: Time.optional(),
+  time_taken: TimeTaken.optional(),
   visibility: Role.optional(),
   difficulty: Difficulty.optional(),
   category: Category,
