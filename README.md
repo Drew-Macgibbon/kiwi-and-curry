@@ -10,6 +10,7 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
   - [@nuxt/image-edge:](https://v1.image.nuxtjs.org/get-started/) Optimize images to improve SEO
   - [@nuxtjs/supabase:]() For auth and database
   - [nuxt-icon:](https://icones.js.org/) Access to 100k free icons, view [here](https://icones.js.org/)
+  - [nuxt-headlessui:](https://headlessui.com/vue/) unstyled vue components, prefix the documentation examples with 'Headless'
 - TypeScript
 - Formatting
   - [Prettier:](https://prettier.io/) For formatting code

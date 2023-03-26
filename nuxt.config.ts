@@ -36,9 +36,9 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     'nuxt-icon',
     '@nuxt/devtools',
-    // https://icones.js.org/
     '@nuxtjs/color-mode',
     '@nuxt/image-edge',
+    'nuxt-headlessui',
     [
       '@pinia/nuxt',
       {
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     key: process.env.SUPABASE_KEY,
   },
   // build: {
-  //   transpile: ['']
+  //   transpile: ['@/vue']
   // },
   ssr: true
 })
