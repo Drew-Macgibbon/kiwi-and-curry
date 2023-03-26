@@ -1,11 +1,13 @@
 <template>
   <div class="min-h-[100vh]">
-    <TheHeader />
-    <TheNavbar />
-    <div class=" grid grid-cols-[1fr_minmax(600px,1200px)_1fr] min-h-full">
-      <div class="bg-red-200" />
-      <slot class="flex justify-center items-center" />
-      <div class="bg-red-200" />
+    <!-- <TheHeader /> -->
+    <TheNavbar class="fixed top-0 left-0 " />
+    <div class="grid grid-cols-[1fr_minmax(600px,1200px)_1fr] min-h-full mt-[60px] relative">
+      <div class="bg-gray-100" />
+      <div class="py-6 px-4">
+        <slot />
+      </div>
+      <div class="bg-gray-100" />
     </div>
   </div>
 </template>
@@ -21,7 +23,7 @@ https://nuxt.com/docs/getting-started/transitions
 */
 .layout-enter-active,
 .layout-leave-active {
-  transition: all 0.4s;
+transition: all 0.4s;
 }
 
 .layout-enter-from,

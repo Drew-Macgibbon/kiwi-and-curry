@@ -1,7 +1,7 @@
 <!-- components/Login.vue -->
 <template>
   <div class="flex items-center justify-center">
-    <div class="bg-white p-8 rounded-md shadow-md w-full max-w-md">
+    <div class="bg-white px-6 py-2 rounded-md shadow-md w-full">
       <button>
         Login
       </button>

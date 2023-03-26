@@ -1,6 +1,7 @@
 // store/data.js
 import { defineStore } from 'pinia'
 import { validateWithZod } from './utils/validation'
+import items from './users.json'
 import * as z from '@/types/zod'
 import * as t from '@/types'
 
@@ -25,6 +26,22 @@ export default defineStore('data', {
     error: null
   }),
   actions: {
+    async bulkInsertItems() {
+      const supabase = useSupabase()
+
+      // const stingifiedItems = JSON.stringify(items)
+
+      const { data, error } = await supabase.rpc('insert_bucket_list_items', {
+        p_items: items
+      })
+      console.log('Data returned', data, error)
+
+      if (error) {
+        console.error('Error inserting items:', error)
+      } else {
+        console.log('Items inserted successfully')
+      }
+    },
     async fetchData() {
       const supabase = useSupabase()
       try {

@@ -1,21 +1,22 @@
 <template>
-  <div class="container mx-auto p-4">
-    <DataTest />
-    <button
+  <div class="mx-auto flex flex-col gap-4">
+    <div class="flex justify-center items-center py-10">
+      <h1 class="text-[5vw] font-bold"> Kiwi & Curry</h1>
+    </div>
+    <AppHero />
+    <!-- <button
       class="bg-blue-500 p-6 rounded-md shadow-md mt-4"
-      @click="d.fetchData()"
+      @click="d.bulkInsertItems()"
     >
-      get bucket list items
-    </button>
-    <div class="flex flex-col md:flex-row gap-4">
+      upload bucket list items
+    </button> -->
+    <div class="flex flex-col-reverse md:flex-row gap-4 h-full">
       <div class="w-full md:w-2/3">
-        <BucketList :filters="filters" />
+        <BucketList />
       </div>
-      <div class="w-full md:w-1/3">
+      <div class="flex flex-col w-full md:w-1/3 min-h-full relative">
         <Filters
-          :categories="categories"
-          :tags="tags"
-          @update-filters="updateFilters"
+          class="sticky top-[84px] border border-gray-200"
         />
       </div>
     </div>
@@ -25,13 +26,6 @@
 <script lang="ts" setup>
 
 const d = useData()
+d.fetchData()
 
-const filters = ref({ category: '', tags: [] })
-
-const categories = ['Adventure', 'Culture', 'Nature']
-const tags = ['Hiking', 'Food', 'Beaches']
-
-const updateFilters = (newFilters) => {
-  filters.value = newFilters
-}
 </script>

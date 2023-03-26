@@ -1,23 +1,43 @@
 <!-- components/BucketListCard.vue -->
 <template>
-   <div class="bg-white border border-gray-200 rounded shadow-md p-4 max-w-md mx-auto">
-    <div class="flex">
-      <div class="w-1/4">
-        <img class="w-full h-24 object-cover rounded" src="https://via.placeholder.com/150" alt="Bucket List Item" />
-      </div>
-      <div class="w-3/4 ml-4">
-        <h2 class="text-xl font-semibold">{{ item.title }}</h2>
-        <p class="text-gray-600 text-sm">{{ item.created_at | formatDate }}</p>
-        <div class="mt-2">
-          <span class="inline-block bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{{ item.category.name }}</span>
-          <span v-for="tag in item.tags" :key="tag.id" class="ml-2 inline-block bg-green-200 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">{{ tag.name }}</span>
-        </div>
+  <div
+    class="bg-white border border-gray-200 rounded shadow-md p-4 w-full flex"
+  >
+    <div class="w-1/4">
+      <img
+        class="w-full h-24 object-cover rounded"
+        src="https://via.placeholder.com/150"
+        alt="Bucket List Item"
+      />
+    </div>
+    <div class="w-3/4 ml-4">
+      <h2 class="text-xl font-semibold">{{ item.title }}</h2>
+      <p
+        v-if="item.body"
+        class="text-gray-600 text-sm"
+      >
+        {{ item.body.substring(0, 240) }}...
+      </p>
+      <div class="mt-2">
+        <span
+          class="inline-block bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full"
+        >
+          {{ item.category.name }}
+        </span>
+        <span
+          v-for="tag in item.tags"
+          :key="tag.id"
+          class="ml-2 inline-block bg-green-200 text-green-700 text-xs font-semibold px-2 py-1 rounded-full"
+        >
+          {{ tag.name }}
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { BucketListItem } from '~~/types'
 const supabase = useSupabase()
 
 const props = defineProps({

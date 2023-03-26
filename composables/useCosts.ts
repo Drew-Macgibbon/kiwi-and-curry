@@ -1,28 +1,27 @@
-// store/data.js
 import { defineStore } from 'pinia'
 import { validateWithZod } from './utils/validation'
 import * as z from '@/types/zod'
 import * as t from '@/types'
 
 type AppState = {
-  categories: t.Category[]
+  costs: t.Cost[]
   error: Error | null
 }
 
-export default defineStore('categories', {
+export default defineStore('costs', {
   state: (): AppState => ({
-    categories: [] as t.Category[],
+    costs: [] as t.Cost[],
     error: null
   }),
   actions: {
-    async getCategories() {
+    async getCosts() {
       const supabase = useSupabase()
       try {
-        const { data: categoriesData, error: categoriesError } = await supabase
-          .from('categories')
+        const { data: costsData, error: costsError } = await supabase
+          .from('costs')
           .select('id, name')
-        if (categoriesError) throw categoriesError
-        this.categories = validateWithZod(z.Category, categoriesData)
+        if (costsError) throw costsError
+        this.costs = validateWithZod(z.Cost, costsData)
       } catch (error) {
         this.error = error
       }

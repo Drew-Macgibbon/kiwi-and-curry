@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Embrace a Month of Honesty and Accountability",
+    "body": "Embrace honesty for a full month by refraining from telling even the smallest lies. If you slip up, own your mistake and come clean. This challenge will help you build trust, improve your relationships, and develop a greater sense of integrity.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 3,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [3]
+  },
+  {
+    "title": "Uncover Your Family's Unique Heritage",
+    "body": "Discover your roots by diving into your family's past. Research your ancestry, connect with relatives, and uncover intriguing stories that shaped your family tree. This journey will give you a deeper understanding of your heritage and strengthen family bonds.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 4,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1],
+    "status_ids": [5]
+  },
+  {
+    "title": "Experience Minimalism: Sell or Donate Your Possessions:",
+    "body": "Experience the freedom of living with less by selling or donating your possessions. This exercise in minimalism will teach you to focus on what truly matters and provide a fresh perspective on the importance of material goods in your life.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 2,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1],
+    "status_ids": [5]
+  },
+  {
+    "title": "Spread Joy with a Week of Random Acts of Kindness",
+    "body": "Brighten the lives of others by performing kind gestures for a week. From helping a stranger to supporting a loved one, these selfless acts will spread positivity, inspire others, and give you a sense of fulfillment.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 3,
+    "time_taken_id": 2,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [3]
+  },
+  {
+    "title": "Master the Art of Deep Connections: A Month of Encouraging Openness:",
+    "body": "Improve your communication and empathy skills by encouraging others to share their thoughts and feelings. Spend a month actively listening and asking open-ended questions to foster deeper connections and better understand those around you.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 2,
+    "time_taken_id": 3,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [5]
+  },
+  {
+    "title": "Forge Lifelong Bonds: Learn the Secrets to Lasting Friendships",
+    "body": "Invest time in building strong, meaningful relationships with others. Focus on developing trust, mutual support, and genuine connections that can stand the test of time. Lasting friendships enrich your life and provide a strong support network.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 2,
+    "time_taken_id": 5,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1],
+    "status_ids": [5]
+  },
+  {
+    "title": "Walk in Their Shoes: Experience a Day as a Blind Person",
+    "body": "Experience life without sight for a day to gain a deeper understanding of the challenges faced by visually impaired individuals. This exercise in empathy will broaden your perspective, increase your appreciation for your senses, and inspire you to advocate for",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 1,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [3]
+  },
+  {
+    "title": "A Week on the Streets: Understanding Homelessness",
+    "body": "Step outside your comfort zone by living on the streets for a week. Experience firsthand the daily struggles of homelessness, fostering compassion and raising awareness of the socio-economic issues that contribute to this complex problem.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 2,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1,2],
+    "status_ids": [4]
+  },
+  {
+    "title": "The Power of Yes: Embrace Spontaneity for a Day",
+    "body": "Embrace spontaneity by saying \"yes\" to every opportunity that comes your way for an entire day. This adventure will open up new experiences, push your boundaries, and help you break free from routine.",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 1,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [3]
+  },
+  {
+    "title": "The Silent Challenge: Communicate without Words for 24 Hours",
+    "body": "Challenge yourself to remain silent for a full day, using non-verbal communication to interact with others. This exercise will sharpen your observation skills, help you appreciate the power of words, and deepen your understanding of alternative communication methods",
+    "category_id": 2,
+    "tag_ids": [8],
+    "cost_id": 1,
+    "time_taken_id": 1,
+    "country_id": null,
+    "role_id": 1,
+    "user_ids": [1, 2],
+    "status_ids": [3]
+  }
+]

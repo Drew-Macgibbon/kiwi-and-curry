@@ -6,16 +6,17 @@ import * as t from '@/types'
 
 type AppState = {
   tags: t.Tag[]
+  tagFilter: t.Tag[]
   error: Error | null
 }
 
-export default defineStore('data', {
+export default defineStore('tags', {
   state: (): AppState => ({
     tags: [] as t.Tag[],
     error: null
   }),
   actions: {
-    async fetchData() {
+    async getTags() {
       const supabase = useSupabase()
       try {
         const { data: tagsData, error: tagsError } = await supabase

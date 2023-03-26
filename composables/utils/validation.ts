@@ -1,6 +1,6 @@
-import { ZodError } from 'zod'
+import { ZodError, ZodSchema } from 'zod'
 
-export function validateWithZod(schema, data) {
+export function validateWithZod(schema: ZodSchema, data: any) {
   try {
     return Array.isArray(data)
       ? data.map((item) => schema.parse(item))

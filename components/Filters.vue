@@ -1,26 +1,32 @@
-<!-- components/Filters.vue -->
 <template>
-  <div class="bg-white p-4 rounded-md shadow-md">
+  <div class="container bg-white p-4 rounded-md shadow-md">
     <h2 class="text-xl font-bold mb-4">Filters</h2>
     <div class="mb-4">
       <h3 class="font-semibold mb-2">Category</h3>
-      <select v-model="selectedCategory" class="w-full">
-        <option value="">All</option>
-        <option
-          v-for="category in categories"
-          :key="category"
-          :value="category"
-        >
-          {{ category }}
-        </option>
-      </select>
+      <AppSelect :items="c.categories" />
     </div>
     <div class="mb-4">
       <h3 class="font-semibold mb-2">Tags</h3>
-      <div v-for="tag in tags" :key="tag" class="mb-2">
-        <input type="checkbox" :id="tag" :value="tag" v-model="selectedTags" />
-        <label :for="tag">{{ tag }}</label>
-      </div>
+      <AppMultiSelect :items="tag.tags" />
+      <!-- <div class="flex flex-wrap gap-2">
+        <div v-for="tag in tags" :key="tag.id" class="mb-2 flex justify-center items-center">
+          <input
+            :id="String(tag.id)"
+            v-model="selectedTags"
+            type="checkbox"
+            :value="tag.name"
+          />
+          <label :for="String(tag.id)" class="ml-2">
+            {{ tag.name }}
+          </label>
+        </div>
+      </div> -->
+    </div>
+    <div
+      v-for="option in pref.booleanFilters"
+      :key="option.id"
+    >
+      <AppOptionSlider :type="option.name" />
     </div>
     <!-- Add more filters for time and money here -->
   </div>
@@ -28,30 +34,12 @@
 
 <script lang="ts" setup>
 
-defineProps({
-  categories: {
-    type: Array as () => string[],
-    required: true
-  },
-  tags: {
-    type: Array as () => string[],
-    required: true
-  }
-})
+const pref = usePreferences()
 
-const selectedCategory = ref('')
-const selectedTags = ref<string[]>([])
+const c = useCategories()
+c.getCategories()
 
-function setCategory() {
-  $emit('update-filters', {
-    category: selectedCategory.value,
-    tags: selectedTags.value
-  })
-}
-function setTags() {
-  $emit('update-filters', {
-    category: selectedCategory.value,
-    tags: selectedTags.value
-  })
-}
+const tag = useTags()
+tag.getTags()
+
 </script>

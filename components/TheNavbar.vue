@@ -1,9 +1,9 @@
 <!-- components/Navbar.vue -->
 <template>
-  <nav class="bg-white p-4 shadow-md">
+  <nav class="bg-white px-6 py-3 shadow-md w-full z-50">
     <div class="container mx-auto flex justify-between">
-      <div>
-        <a href="/" class="font-bold text-xl">Logo</a>
+      <div class="flex justify-center items-center">
+        <a href="/" class="font-bold text-xl">Kiwi & Curry</a>
       </div>
       <LoginButton />
       <div
