@@ -1,5 +1,5 @@
 <!--
-  Cathall route for rendering 404s
+  Catch all route for rendering 404s
   https://nuxt.com/docs/guide/directory-structure/pages/#catch-all-route
 -->
 

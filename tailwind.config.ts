@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss"
+
+export default <Partial<Config>>{
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -9,7 +10,12 @@ module.exports = {
   ],
   mode: 'jit',
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        recoleta: ["Recoleta", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
