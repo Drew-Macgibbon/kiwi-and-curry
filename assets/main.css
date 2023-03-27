@@ -39,6 +39,10 @@
   body {
     @apply font-inter bg-[#ffffff] text-[#171717] dark:bg-[#151718] dark:text-[#ededef];
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
   .title {
     @apply text-3xl sm:text-4xl font-semibold font-recoleta;
   }

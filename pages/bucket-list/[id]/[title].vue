@@ -94,7 +94,7 @@
 
       <!-- <article :class="[bucketListItem?.body.toc.links.length <= 0 ? 'col-span-8' : 'col-span-8  sm:col-span-6']" class="pr-4 pb-6">
       </article> -->
-      <div class="col-span-8 sm:col-span-6 pr-4 pb-6">
+      <div class="col-span-8 sm:col-span-6 pr-4 pb-6 prose">
         <p class="text-left mt-6">🤷🏼‍♂️ {{ bucketListItem.body }}</p>
       </div>
       <div
@@ -124,13 +124,6 @@ const bucketListItem = ref({} as t.BucketListItem)
 const error = ref(null)
 
 const itemId = Number(router.currentRoute.value.params.id)
-
-// onMounted(async () => {
-//   if (!prevItem?.id) {
-//     const dbItem = await bucketList.getItemById(itemId)
-//     if (dbItem) prevItem = dbItem[0]
-//   }
-// })
 
 async function fetchBucketListItem(id: number) {
   const { data, error } = await supabase.rpc('get_single_item', { itemid: id })
