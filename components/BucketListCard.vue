@@ -1,24 +1,20 @@
 <!-- components/BucketListCard.vue -->
 <template>
   <div
-    class="bg-white border border-gray-200 rounded shadow-md p-4 w-full flex"
+    class="bg-white border border-gray-200 rounded shadow-md p-4 w-full flex items-center"
   >
-    <div class="w-1/4">
+    <div class="w-[120px] h-[120px]">
       <img
-        class="w-full h-24 object-cover rounded"
-        src="https://via.placeholder.com/150"
+        class="w-full h-full object-cover rounded"
+        src="https://via.placeholder.com/120"
         alt="Bucket List Item"
       />
     </div>
-    <div class="w-3/4 ml-4">
-      <h2 class="text-xl font-semibold">{{ item.title }}</h2>
-      <p
-        v-if="item.body"
-        class="text-gray-600 text-sm"
-      >
-        {{ item.body.substring(0, 240) }}...
-      </p>
-      <div class="mt-2">
+    <div class="w-3/4 ml-4 flex flex-col gap-2">
+      <NuxtLink :to="`/bucket-list/${item.id}/${item.title.replaceAll(' ', '-').toLowerCase()}`">
+        <h2 class="text-xl font-semibold">{{ item.title }}</h2>
+      </NuxtLink>
+      <div>
         <span
           class="inline-block bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full"
         >
@@ -32,6 +28,12 @@
           {{ tag.name }}
         </span>
       </div>
+      <p
+        v-if="item.body"
+        class="text-gray-600 text-sm"
+      >
+        {{ item.body.substring(0, 160) }}...
+      </p>
     </div>
   </div>
 </template>

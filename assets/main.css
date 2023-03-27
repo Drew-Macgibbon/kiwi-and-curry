@@ -1,6 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta Black"), local("Recoleta-Black"),
+    url("./fonts/Recoleta-Black/Recoleta-Black.woff2") format("woff2"),
+    url("./fonts/Recoleta-Black/Recoleta-Black.woff") format("woff"),
+    url("./fonts/Recoleta-Black/Recoleta-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta SemiBold"), local("Recoleta-SemiBold"),
+    url("./fonts/Recoleta-Black/Recoleta-SemiBold.woff2") format("woff2"),
+    url("./fonts/Recoleta-Black/Recoleta-SemiBold.woff") format("woff"),
+    url("./fonts/Recoleta-Black/Recoleta-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta Regular"), local("Recoleta-Regular"),
+    url("./fonts/Recoleta-Black/Recoleta-Regular.woff2") format("woff2"),
+    url("./fonts/Recoleta-Black/Recoleta-Regular.woff") format("woff"),
+    url("./fonts/Recoleta-Black/Recoleta-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  body {
+    @apply font-inter bg-[#ffffff] text-[#171717] dark:bg-[#151718] dark:text-[#ededef];
+  }
+  .title {
+    @apply text-3xl sm:text-4xl font-semibold font-recoleta;
+  }
+  .input {
+    @apply h-[40px] rounded-md border border-[#c7c7c7] focus:border-[#303063] pl-4 outline-0 dark:border-[#34343a] bg-[#f1f2f4] pr-[18px] text-[13px] dark:bg-[#232425];
+  }
+  .input.has-error {
+    @apply border-red-500 dark:border-[#FCA5A5];
+  }
+  .input-search {
+    @apply h-[40px] rounded-md border border-[#c7c7c7] focus:border-[#303063] pl-8
+      sm:w-[300px] outline-0 dark:border-[#34343a] bg-[#ffffff] pr-[18px] dark:bg-[#232425];
+  }
+  .textarea.has-error {
+    @apply border-red-500 dark:border-[#FCA5A5];
+  }
+  .tag {
+    @apply inline-flex items-center justify-center rounded-full border border-[#4c4c4c] dark:border-[#34343a] text-xs font-normal px-2 py-[4px] mr-[8px] mb-[8px] duration-300 shadow-md;
+  }
+  .category {
+    @apply inline-flex items-center justify-center rounded-full border border-[#4c4c4c] dark:border-[#34343a] text-base px-3 py-[4px] mr-[8px] mb-[8px] font-normal duration-300 shadow-md;
+  }
+  .button {
+    @apply inline-flex rounded-full relative border py-[8px] pl-[8px] pr-[13px] text-[15px] border-[#c7c7c7] dark:border-[#34343a] focus:scale-90;
+  }
+  .button-more-outlined {
+    @apply flex items-center justify-center py-3 text-center duration-300;
+  }
+  .button-more-outlined:hover {
+    @apply text-[#9CA3AF] duration-300;
+  }
+  .button-more {
+    @apply flex items-center justify-center rounded-md bg-[#E8E8E8] py-3 px-5 text-center whitespace-nowrap text-[#6f6f6f] dark:text-[#6372a5] duration-300 dark:bg-[#171C34];
+  }
+  .button-more:hover {
+    @apply text-white duration-300;
+  }
+  .button-readnow {
+    @apply mt-2;
+  }
+  .textarea {
+    @apply rounded-md border border-[#c7c7c7] dark:border-[#34343a] bg-[#f1f2f4] p-4 pr-[18px] text-[13px] outline-none focus:border-[#303063] dark:bg-[#232425];
+  }
+  .social-home-button {
+    @apply mr-[11px] h-[36px] flex justify-center items-center bg-[#E8E8E8] w-[36px] rounded-full dark:bg-[#232425];
+  }
+  .posthome {
+    @apply pb-4 flex items-center;
+  }
+  .posthome:nth-child(1),
+  .posthome:nth-child(2) {
+    @apply border-b  border-[#c7c7c7] dark:border-[#475584];
+  }
+}
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {

@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 
-const d = useData()
-d.fetchData()
+const d = useBucketList()
+d.getBucketList()
 
 </script>

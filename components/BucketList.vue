@@ -9,7 +9,7 @@
 import BucketListCard from './BucketListCard.vue'
 // import { BucketListItem, Tag } from '@/types'
 
-const d = useData()
+const d = useBucketList()
 
 // Implement filtering logic here
 // const filteredItems = computed(() => {

@@ -66,17 +66,18 @@ export const User = z.object({
 
 export const BucketListItem = z.object({
   id: z.number(),
-  created_at: z.string().optional(),
+  created_at: z.string(),
   updated_at: z.string().optional(),
   title: z.string(),
   body: z.string().nullable().optional(),
+  featured_image: z.string().nullable().optional(),
   country: Country.nullable().optional(),
   cost: Cost.optional(),
   time_taken: TimeTaken.optional(),
   visibility: Role.optional(),
   difficulty: Difficulty.optional(),
   category: Category,
-  status: z.array(Status),
+  status: z.array(Status).optional(),
   tags: z.array(Tag).optional(),
   users: z.array(User).optional()
 })
