@@ -54,7 +54,7 @@
     </div>
 
     <div class="grid grid-cols-8">
-      <NuxtLink to="/">
+      <NuxtLink to="/bucket-list">
         <button class="button-more">Back to list</button>
       </NuxtLink>
       <div

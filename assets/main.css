@@ -79,7 +79,7 @@
     @apply flex items-center justify-center rounded-md bg-[#E8E8E8] py-3 px-5 text-center whitespace-nowrap text-[#6f6f6f] dark:text-[#6372a5] duration-300 dark:bg-[#171C34];
   }
   .button-more:hover {
-    @apply text-white duration-300;
+    @apply text-black bg-[#efefef] shadow-lg duration-300;
   }
   .button-readnow {
     @apply mt-2;

@@ -1,7 +1,7 @@
 <!-- components/BucketListCard.vue -->
 <template>
   <div
-    class="bg-white border border-gray-200 rounded shadow-md p-4 w-full flex items-center"
+    class="bg-gray-100 border border-gray-200 rounded shadow-md p-4 w-full flex items-center"
   >
     <div class="w-[150px] h-full border border-gray-200 rounded-md">
       <img
@@ -12,7 +12,7 @@
     </div>
     <div class="w-3/4 ml-4 flex flex-col gap-2">
       <NuxtLink :to="`/bucket-list/${item.id}/${item.title.replaceAll(' ', '-').toLowerCase()}`">
-        <h2 class="text-lg font-semibold">{{ item.title.substring(0, 46) }}...</h2>
+        <h2 class="text-lg font-semibold">{{ item.title }}</h2>
       </NuxtLink>
       <div>
         <span

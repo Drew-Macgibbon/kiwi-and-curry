@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col max-w-[900px] mx-auto">
     <h1 class="text-[5vw] font-bold text-center pb-20">
       Our Bucket List
     </h1>

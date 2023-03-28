@@ -1,5 +1,5 @@
 <template>
-  <div class="container bg-white p-4 rounded-md shadow-md">
+  <div class="container bg-gray-100 p-4 rounded-md shadow-md">
     <h2 class="text-xl font-bold mb-4">Filters</h2>
     <h3 class="font-semibold mb-2">Coming soon...</h3>
     <!-- <div class="mb-4">

@@ -1,8 +1,8 @@
 <template>
   <div class="flex items-center justify-center">
-    <div class="bg-blue-600 text-white font-semibold text-xs px-6 py-2 rounded-md shadow-lg">
+    <div class="bg-blue-600 text-white font-semibold text-sm px-6 py-2 rounded-md shadow-lg">
       <NuxtLink to="/coming-soon">
-        Create your bucket list!
+        Your bucket list!
       </NuxtLink>
       <!-- <button v-else @click="client.auth.signOut()">Logout</button>
       <supabase-auth v-model="user" />  -->

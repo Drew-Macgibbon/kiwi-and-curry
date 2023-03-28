@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mx-auto lg:py-16 md:py-12 py-9 max-w-[900px] flex flex-col items-center">
+    <div class="container mx-auto max-w-[900px] flex flex-col items-center">
       <div class="flex flex-col justify-center items-center py-10 w-full mx-auto">
         <h2 class="text-[2.5vw] font-bold">Welcome to</h2>
         <!-- <h3 class="text-[2vw] font-thin">to</h3> -->
