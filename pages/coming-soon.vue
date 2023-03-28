@@ -1,7 +1,8 @@
 <template>
   <section class="h-full flex justify-center items-center">
     <div class="flex flex-col p-4 prose md:prose-lg ">
-      <h1>Introducing: The Adventure Vault by Kiwi and Curry!</h1>
+      <h3>Introducing</h3>
+      <h1>The Adventure Vault by Kiwi and Curry!</h1>
       <img src="adventure-vault.jpg" alt="Kiwi and Curry Adventure Vault coming soon!!" width="100%">
       <p>
         Are you ready to embark on the journey of a lifetime? Kiwi and Curry are proud to announce the upcoming release of our brand-new app, The Adventure Vault! Designed to fuel

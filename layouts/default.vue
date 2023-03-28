@@ -1,9 +1,8 @@
 <template>
   <div class="min-h-[100vh]">
-    <!-- <TheHeader /> -->
     <TheNavbar class="fixed top-0 left-0 " />
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_minmax(600px,1200px)_1fr] min-h-full mt-[60px] relative">
-      <div class="bg-gray-100"/>
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] min-h-full mt-[60px] relative">
+      <div class="bg-gray-100" />
       <div class="py-[80px] px-4">
         <slot />
       </div>

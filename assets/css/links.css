@@ -1,0 +1,9 @@
+/* home route and active route will show in bold as it matches / and /about */
+.router-link-active {
+  font-weight: bold;
+}
+/* exact link will show the primary color for only the exact matching link */
+.router-link-exact-active {
+  color: #315ebf;
+  font-weight: bold;
+}

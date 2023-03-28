@@ -3,16 +3,16 @@
   <div
     class="bg-white border border-gray-200 rounded shadow-md p-4 w-full flex items-center"
   >
-    <div class="w-[120px] h-[120px]">
+    <div class="w-[150px] h-full border border-gray-200 rounded-md">
       <img
         class="w-full h-full object-cover rounded"
-        src="https://via.placeholder.com/120"
+        :src="`https://nuhchyxmsixjuixlmere.supabase.co/storage/v1/object/public/public/${item.featured_image}`"
         alt="Bucket List Item"
       />
     </div>
     <div class="w-3/4 ml-4 flex flex-col gap-2">
       <NuxtLink :to="`/bucket-list/${item.id}/${item.title.replaceAll(' ', '-').toLowerCase()}`">
-        <h2 class="text-xl font-semibold">{{ item.title }}</h2>
+        <h2 class="text-lg font-semibold">{{ item.title.substring(0, 46) }}...</h2>
       </NuxtLink>
       <div>
         <span
@@ -28,12 +28,12 @@
           {{ tag.name }}
         </span>
       </div>
-      <p
+      <!-- <p
         v-if="item.body"
         class="text-gray-600 text-sm"
       >
         {{ item.body.substring(0, 160) }}...
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

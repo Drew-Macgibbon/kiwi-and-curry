@@ -1,18 +1,16 @@
 <template>
-  <div
-    class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
-  >
+  <div class="flex gap-8 items-center md:justify-around sm:justify-around lg:justify-around">
     <div
-      class="w-full relative mt-16 mb-32 sm:mb-24"
       v-for="user in u.kAndC"
       :key="user.id"
+      class="w-full relative mt-16"
     >
       <div class="h-300 rounded overflow-hidden shadow-md bg-gray-100">
         <div class="absolute -mt-20 w-full flex justify-center">
           <div class="h-32 w-32">
             <img
-              src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
-              alt=""
+              :src="`kc/${user.avatar}`"
+              :alt="`${user}`"
               class="rounded-full object-cover h-full w-full shadow-md"
             />
           </div>
@@ -28,7 +26,10 @@
             {{ user.introduction }}
           </p>
           <div class="w-full flex justify-center pt-5 pb-5">
-            <a href="javascript:void(0)" class="mx-5">
+            <a
+              href="javascript:void(0)"
+              class="mx-5"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +49,10 @@
                 </svg>
               </div>
             </a>
-            <a href="javascript:void(0)" class="mx-5">
+            <a
+              href="javascript:void(0)"
+              class="mx-5"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,10 @@
                 </svg>
               </div>
             </a>
-            <a href="javascript:void(0)" class="mx-5">
+            <a
+              href="javascript:void(0)"
+              class="mx-5"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +89,21 @@
                   stroke-linejoin="round"
                   class="feather feather-instagram"
                 >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  <rect
+                    x="2"
+                    y="2"
+                    width="20"
+                    height="20"
+                    rx="5"
+                    ry="5"
+                  ></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line
+                    x1="17.5"
+                    y1="6.5"
+                    x2="17.51"
+                    y2="6.5"
+                  ></line>
                 </svg>
               </div>
             </a>

@@ -1,14 +1,15 @@
 <template>
   <div class="container bg-white p-4 rounded-md shadow-md">
     <h2 class="text-xl font-bold mb-4">Filters</h2>
-    <div class="mb-4">
+    <h3 class="font-semibold mb-2">Coming soon...</h3>
+    <!-- <div class="mb-4">
       <h3 class="font-semibold mb-2">Category</h3>
       <AppSelect :items="c.categories" />
     </div>
     <div class="mb-4">
       <h3 class="font-semibold mb-2">Tags</h3>
       <AppMultiSelect :items="tag.tags" />
-      <!-- <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2">
         <div v-for="tag in tags" :key="tag.id" class="mb-2 flex justify-center items-center">
           <input
             :id="String(tag.id)"
@@ -20,14 +21,14 @@
             {{ tag.name }}
           </label>
         </div>
-      </div> -->
+      </div>
     </div>
     <div
       v-for="option in pref.booleanFilters"
       :key="option.id"
     >
       <AppOptionSlider :type="option.name" />
-    </div>
+    </div> -->
     <!-- Add more filters for time and money here -->
   </div>
 </template>
