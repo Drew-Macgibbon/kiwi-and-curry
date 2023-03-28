@@ -56,14 +56,14 @@ export default defineNuxtConfig({
     // Keys within public, will be also exposed to the client-side
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY,
+      supabaseKey: process.env.SUPABASE_ANON_KEY,
       apiBase: '/api'
     }
   },
   supabase: {
     // Options: https://supabase.nuxtjs.org/get-started#options
     url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_KEY,
+    key: process.env.SUPABASE_ANON_KEY,
   },
   // build: {
   //   transpile: ['@/vue']

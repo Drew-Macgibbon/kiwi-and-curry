@@ -12,6 +12,7 @@
         />
         {{ prev.title.length > 40 ? prev.title.substring(0, 40) + '...' : prev.title }}
       </NuxtLink>
+      <p v-else class="text-sm flex items-center">Start...</p>
     </div>
     <div class="bg-gray-100 rounded-sm p-2">
       <NuxtLink
@@ -25,6 +26,7 @@
           class="ml-2 h-[32px] w-[32px]"
         />
       </NuxtLink>
+      <p v-else class="text-sm flex items-center">End...</p>
     </div>
   </div>
 </template>

@@ -98,12 +98,11 @@
         <p class="text-left mt-6">🤷🏼‍♂️ {{ bucketListItem.body }}</p>
       </div>
       <div
-        v-if="prevItem?.id !== 7"
         class="hidden sm:block col-span-2 pl-6"
       >
         <aside class="sticky top-10 mt-[3rem] h-[auto]">
-          <BlogPrevLink
-            v-if="prevItem"
+          <BlogPrevNextLink
+            v-if="prevItem || nextItem"
             class="hidden sm:flex"
             :prev="prevItem"
             :next="nextItem"
@@ -141,6 +140,8 @@ const prevItem = await fetchBucketListItem(itemId !== 7 ? itemId - 1 : 7)
 const nextItem = await fetchBucketListItem(itemId + 1)
 const prev = `/bucket-list/${itemId - 1}/${prevItem?.title}`
 const next = `/bucket-list/${itemId + 1}/${nextItem?.title}`
+
+console.log('prevItem', prevItem, nextItem)
 
 useAsyncData(async () => {
   const id = router.currentRoute.value.params.id
