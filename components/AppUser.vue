@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col-reverse md:flex-row-reverse gap-8 items-start">
+  <div class="flex flex-col-reverse md:flex-row-reverse gap-16 md:gap-8 items-start">
     <div
       v-for="user in u.kAndC"
       :key="user.id"
