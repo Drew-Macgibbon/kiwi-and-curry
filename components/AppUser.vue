@@ -1,27 +1,26 @@
 <template>
-  <div class="flex gap-8 items-center md:justify-around sm:justify-around lg:justify-around">
+  <div class="flex flex-col-reverse md:flex-row-reverse gap-8 items-start">
     <div
       v-for="user in u.kAndC"
       :key="user.id"
-      class="w-full relative mt-16"
+      class="w-full relative mt-16 h-full"
     >
       <div class="h-300 rounded overflow-hidden shadow-md bg-gray-100">
         <div class="absolute -mt-20 w-full flex justify-center">
           <div class="h-32 w-32">
             <img
               :src="`kc/${user.avatar}`"
-              :alt="`${user}`"
+              :alt="`Hi my name is ${user}, and I make half of Kiwi and Curry.`"
               class="rounded-full object-cover h-full w-full shadow-md"
             />
           </div>
         </div>
         <div class="px-6 mt-16">
-          <div class="font-bold text-3xl text-center pb-1">
+          <span class="font-bold text-2xl flex justify-center items-center">
             {{ user.given_name }}
-          </div>
-          <p class="text-gray-800 text-sm text-center">
-            {{ user.role_id }}
-          </p>
+            <small class="text-sm flex justify-center items-center">({{ user.given_name === 'Shweta' ? 'Curry' : 'Kiwi' }})</small>
+          </span>
+          <p class="text-lg text-center pb-1"> </p>
           <p class="text-center text-gray-600 text-base pt-3 font-normal">
             {{ user.introduction }}
           </p>
@@ -115,6 +114,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { User } from '@/types'
 
 const u = useUsers()

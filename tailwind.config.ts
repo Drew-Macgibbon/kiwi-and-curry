@@ -26,6 +26,7 @@ export default <Partial<Config>>{
         '2xl': `${baseFontSize * goldenRatio**1.5}px`,
         '3xl': `${baseFontSize * goldenRatio**2}px`,
         '4xl': `${baseFontSize * goldenRatio**2.5}px`,
+        '5xl': `${baseFontSize * goldenRatio**3}px`,
       },
       colors: {
         'primary': '#ff9800',

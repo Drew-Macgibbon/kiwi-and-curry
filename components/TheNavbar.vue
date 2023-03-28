@@ -1,18 +1,18 @@
 <!-- components/Navbar.vue -->
 <template>
-  <nav class="bg-white grid grid-cols-1 md:grid-cols-[1fr_4fr_1fr] justify-center items-center w-full z-50 shadow-md h-[60px] fixed">
+  <nav class="bg-white grid grid-cols-2 md:grid-cols-[1fr_4fr_1fr] justify-center items-center w-full z-50 shadow-md h-[60px] fixed">
     <div class="flex justify-center items-center">
       <NuxtLink to="/">
         <p class="font-bold text-lg">Kiwi & Curry</p>
       </NuxtLink>
     </div>
-    <div class="flex items-center gap-4">
+    <div class="hidden md:flex items-center gap-4">
       <p> | </p>
       <NuxtLink to="/bucket-list">
         <p class="text-sm">Bucket list</p>
       </NuxtLink>
     </div>
-    <div>
+    <div class="flex justify-end pr-4">
       <LoginButton />
     </div>
     <!-- <div class="flex justify-between">

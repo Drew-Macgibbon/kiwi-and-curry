@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-col max-w-[900px] mx-auto">
-    <h1 class="text-[5vw] font-bold text-center pb-20">
-      Our Bucket List
-    </h1>
+    <div class="bg-gradient-to-bl from-emerald-500 to-emerald-900 rounded-xl shadow-xl flex justify-center items-center py-8 px-4 mb-8">
+      <h1 class="text-lg md:text-2xl text-white font-bold text-center">
+        Kiwi & Curry Bucket List
+      </h1>
+    </div>
     <div class="flex flex-col-reverse md:flex-row gap-4 h-full">
       <div class="w-full md:w-2/3">
         <BucketList />
