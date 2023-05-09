@@ -46,6 +46,13 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  devtools: {
+    // Enable devtools (default: true)
+    enabled: true,
+    // VS Code Server options
+    vscode: {},
+    // ...other options
+  },
   partytown: {
     // For google analytics
     forward: ['dataLayer.push'],
@@ -55,8 +62,6 @@ export default defineNuxtConfig({
     apiSecret: '123',
     // Keys within public, will be also exposed to the client-side
     public: {
-      supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_ANON_KEY,
       apiBase: '/api'
     }
   },

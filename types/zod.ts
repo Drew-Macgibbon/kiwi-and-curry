@@ -53,7 +53,7 @@ export const Country = z.object({
 })
 
 export const User = z.object({
-  id: z.number(),
+  id: z.string(),
   created_at: z.string().optional(),
   updated_at: z.string().optional(),
   given_name: z.string(),

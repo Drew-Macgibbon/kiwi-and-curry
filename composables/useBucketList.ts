@@ -57,7 +57,7 @@ export default defineStore('bucket-list', {
     async getBucketList() {
       const supabase = useSupabase()
       try {
-        const { data, error } = await supabase.rpc('get_items')
+        const { data, error } = await supabase.rpc('get_items_many')
         console.log('itemsReturned', data, error)
 
         if (error) throw error

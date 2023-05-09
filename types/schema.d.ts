@@ -286,7 +286,7 @@ export interface Database {
       [_ in never]: never
     }
     Functions: {
-      get_items: {
+      get_items_many: {
         Args: Record<PropertyKey, never>
         Returns: {
           id: number
